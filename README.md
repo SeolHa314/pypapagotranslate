@@ -12,9 +12,9 @@
 
 ## 설치
 
-**그런 거 없다.**
-
-그냥 프로젝트 폴더에 pypapagotranslate 폴더를 넣어서 쓰도록.
+```
+pip3 install pypapagotranslate
+```
 
 ## 쓰는 방법
 
