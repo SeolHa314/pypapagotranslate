@@ -1,10 +1,8 @@
 import requests
 from .exceptions import *
 
-class PapagoTranslate():
-
-    _papagetranslateurl = "https://openapi.naver.com/v1/papago/n2mt"
-
+class NaverApi():
+    
     def __init__(self, clientid : str, clientsecret : str):
         self._clientid = clientid
         self._clientsecret = clientsecret
@@ -15,6 +13,10 @@ class PapagoTranslate():
             "X-Naver-Client-Id" : clientid,
             "X-Naver-Client-Secret" : clientsecret
         }
+
+class Translate(NaverApi):
+
+    #_papagetranslateurl = "https://openapi.naver.com/v1/papago/n2mt"
 
     def _makecontent(self, source : str, target : str, context : str):
         self._params = {
@@ -31,7 +33,7 @@ class PapagoTranslate():
         self._makecontent(self.source, self.target, self._context)
 
         try :
-            self._response = requests.post(self._papagetranslateurl, \
+            self._response = requests.post(self._papagotranslateurl, \
                 headers = self._headers, \
                 data = self._params)
             self._response.raise_for_status()
@@ -48,4 +50,12 @@ class PapagoTranslate():
 
         else:
             return self._response.json()["message"]["result"]["translatedText"]
+
+class N2MT(Translate):
+    _papagotranslateurl = "https://openapi.naver.com/v1/papago/n2mt"
+
+class SMT(Translate):
+    _papagotranslateurl = "https://openapi.naver.com/v1/language/translate"
+
+
             

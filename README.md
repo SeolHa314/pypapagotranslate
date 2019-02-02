@@ -4,7 +4,7 @@
 
 만든 사람 : [SeolHa314](https://github.com/seolha314)
 
-현재 버전 : 0.0.1
+현재 버전 : 0.1.1
 
 ## 이건 무었을 하느냐.
 
@@ -19,17 +19,28 @@
 ## 쓰는 방법
 
 ```python
-from pypapagotranslate import PapagoTranslate
+from pypapagotranslate import N2MT, SMT
 
-papago = PapagoTranslate("파파고_api_clientid", "파파고_api_secret")
+n2mt = n2mt("n2mt_api_clientid", "n2mt_api_secret")
 
-print(papago.translate("en", "ko", "Hello world!")) # 출발 언어, 번역 대상 언어, 번역할 내용
+print(n2mt.translate("en", "ko", "Hello world!")) # 출발 언어, 번역 대상 언어, 번역할 내용
 # 안녕 세상!
 
-print(papago.source)
+print(n2mt.source)
 # en
 
-print(papago.target)
+print(n2mt.target)
+# ko
+
+smt = smt("smt_api_clientid", "smt_api_secret")
+
+print(n2mt.translate("en", "ko", "Just do it!")) # 출발 언어, 번역 대상 언어, 번역할 내용
+# 단지 행하라!
+
+print(n2mt.source)
+# en
+
+print(n2mt.target)
 # ko
 ```
 
@@ -37,7 +48,9 @@ print(papago.target)
 
 **언어 감지 기능은 아직 없음**
 
-아직 구현된 것은 N2MT 번역 뿐이고, SMT 번역은 구현 예정.
+~~아직 구현된 것은 N2MT 번역 뿐이고, SMT 번역은 구현 예정.~~
+
+SMT 번역을 구현했습니다.
 
 ## 여담
 
@@ -45,8 +58,8 @@ print(papago.target)
 
 ## TODO
 
-- [] SMT 번역 구현하기
-- [] setup.py 만들기
-- [] 버그 찾아보기
-- [] 코드 가독성 올리기
-- [] 테스트도 추가하기
+- [x] SMT 번역 구현하기
+- [ ] setup.py 만들기
+- [ ] 버그 찾아보기
+- [ ] 코드 가독성 올리기
+- [ ] 테스트도 추가하기
