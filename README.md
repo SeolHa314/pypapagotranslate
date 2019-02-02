@@ -21,7 +21,7 @@ pip3 install pypapagotranslate
 ```python
 from pypapagotranslate import N2MT, SMT
 
-n2mt = n2mt("n2mt_api_clientid", "n2mt_api_secret")
+n2mt = N2MT("n2mt_api_clientid", "n2mt_api_secret")
 
 print(n2mt.translate("en", "ko", "Hello world!")) # 출발 언어, 번역 대상 언어, 번역할 내용
 # 안녕 세상!
@@ -32,7 +32,7 @@ print(n2mt.source)
 print(n2mt.target)
 # ko
 
-smt = smt("smt_api_clientid", "smt_api_secret")
+smt = SMT("smt_api_clientid", "smt_api_secret")
 
 print(n2mt.translate("en", "ko", "Just do it!")) # 출발 언어, 번역 대상 언어, 번역할 내용
 # 단지 행하라!
