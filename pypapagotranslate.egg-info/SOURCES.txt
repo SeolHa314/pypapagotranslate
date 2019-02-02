@@ -1,0 +1,10 @@
+README.md
+setup.py
+pypapagotranslate/__init__.py
+pypapagotranslate/exceptions.py
+pypapagotranslate/translator.py
+pypapagotranslate.egg-info/PKG-INFO
+pypapagotranslate.egg-info/SOURCES.txt
+pypapagotranslate.egg-info/dependency_links.txt
+pypapagotranslate.egg-info/requires.txt
+pypapagotranslate.egg-info/top_level.txt
