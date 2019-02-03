@@ -6,7 +6,7 @@
 
 현재 버전 : 0.1.1.2
 
-## 이건 무었을 하느냐.
+## 이건 무엇을 하느냐.
 
 파파고 번역의 api 이용을 편하게 하기 위해서 만든 것이다.
 
@@ -19,6 +19,7 @@ pip3 install pypapagotranslate
 ## 쓰는 방법
 
 [이 곳](notebook/quickstart_kr.ipynb)을 참조해 주세요
+
 
 ## 주의점
 
