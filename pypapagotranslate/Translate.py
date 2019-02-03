@@ -1,22 +1,8 @@
 import requests
 from .exceptions import *
-
-class NaverApi():
-    
-    def __init__(self, clientid : str, clientsecret : str):
-        self._clientid = clientid
-        self._clientsecret = clientsecret
-
-    def _makeheader(self, clientid : str, clientsecret : str):
-        self._headers = {
-            "Content-Type" : "application/x-www-form-urlencoded; charset=UTF-8",
-            "X-Naver-Client-Id" : clientid,
-            "X-Naver-Client-Secret" : clientsecret
-        }
+from .api import NaverApi
 
 class Translate(NaverApi):
-
-    #_papagetranslateurl = "https://openapi.naver.com/v1/papago/n2mt"
 
     def _makecontent(self, source : str, target : str, context : str):
         self._params = {
