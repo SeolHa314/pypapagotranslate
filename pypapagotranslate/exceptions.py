@@ -22,6 +22,12 @@ class PapagoError(Exception):
             self.message = "내부 서버 에러"
         elif(self.errorcode == "LD01"):
             self.message = "입력된 text가 없습니다"
+        elif(self.errorcode == "400"):
+            self.message = "잘못된 쿼리요청입니다"
+        elif(self.errorcode == "024"):
+            self.message = "인증에 실패하였습니다"
+        elif(self.errorcode == "072"):
+            self.message = "지원하지 않는 프로토콜입니다. HTTPS를 사용해 주세요."
         else:
             self.message = "정의되지 않은 에러입니다."
 
