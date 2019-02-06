@@ -18,8 +18,16 @@ class PapagoError(Exception):
             self.message = "text 파라미터가 필요합니다."
         elif(self.errorcode in ["N2MT08", "TR08"]):
             self.message = "text 파라미터가 최대 용량을 초과했습니다."
-        elif(self.errorcode in ["N2MT99", "TR99"]):
+        elif(self.errorcode in ["N2MT99", "TR99", "LD99"]):
             self.message = "내부 서버 에러"
+        elif(self.errorcode == "LD01"):
+            self.message = "입력된 text가 없습니다"
+        elif(self.errorcode == "400"):
+            self.message = "잘못된 쿼리요청입니다"
+        elif(self.errorcode == "024"):
+            self.message = "인증에 실패하였습니다"
+        elif(self.errorcode == "072"):
+            self.message = "지원하지 않는 프로토콜입니다. HTTPS를 사용해 주세요."
         else:
             self.message = "정의되지 않은 에러입니다."
 

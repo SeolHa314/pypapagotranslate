@@ -4,3 +4,4 @@ __pycache__/
 some_test.py
 build/
 virt/
+notebook/.ipynb_checkpoints
