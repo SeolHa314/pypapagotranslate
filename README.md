@@ -4,7 +4,7 @@
 
 만든 사람 : [SeolHa314](https://github.com/seolha314)
 
-현재 버전 : 0.1.1.2
+현재 버전 : 0.2.0
 
 ## 이건 무엇을 하느냐.
 
@@ -12,8 +12,8 @@
 
 ## 설치
 
-```
-pip3 install pypapagotranslate
+```console
+foo@bar~$ pip3 install pypapagotranslate
 ```
 
 ## 쓰는 방법
@@ -23,11 +23,12 @@ pip3 install pypapagotranslate
 
 ## 주의점
 
-**언어 감지 기능은 아직 없음**
+~~**언어 감지 기능은 아직 없음**~~
 
 ~~아직 구현된 것은 N2MT 번역 뿐이고, SMT 번역은 구현 예정.~~
 
 SMT 번역을 구현했습니다.
+감지 기능이 구현되었습니다.
 
 ## 여담
 
